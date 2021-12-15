@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação e tags obsoletas em HTML5</title>
+</head>
+<body>
+    <header>
+        <h1>HTML5 - HTML SEMÂNTICO</h1>
+    <p>  
+        Uma das principais mudanças da HTML 4 para a 5 é o foco da linguagem: <abbr          title="Hyper-Text Markup Language 5">HTML5</abbr> é focado em sêmantica e estrutura de conteúdo,
+        toda forma fica a cargo das <abbr title="Cascading Style Sheets 3">CSS3</abbr>. <br>
+        A semântica é importante para dar sentido a cada elemento e parte do documento, ajudando os mecanismos de pesquisa a encontrar seu site com mais eficiência e também os mecanismos de acessibilidade a adaptar melhor o conteúdo.
+    </p>
+    <p>
+        Dessa forma, as tags da HTML4 que lidavam exclusivamente com a forma dos elementos foram trocadas por tags semânticas, ou mesmo tornadas totalmente obsoletas. Abaixo temos algumas desses casos.
+    </p>
+    </header>
+    
+    <section>    
+        <h1>Tags obsoletas e tags semânticas</h1>
+        <!--Tag obsoletas-->
+        <p>As seguintes tags foram tornadas obsoletas pela HTML5</p>
+        <ul><code>
+            <li>big</li>
+            <li>i</li>
+            <li>u</li>
+            <li>b</li>
+            <li>strike</li>
+            <li>blink</li>
+            <li>marquee</li>
+            <li>applet</li>
+            <li>center</li>
+            <li>font</li>
+            <li>acronym</li>
+            <li>tt</li>
+            <li>xmp</li>
+            <li>dir</li>
+        </code></ul> 
+        <!--Tags semânticas-->
+        <p>Essas são somente algumas das tags semânticas usadas agora. <strong>Existem muitas outras</strong></p>
+        <ul><code>
+            <li>strong</li>
+            <li>em</li>
+            <li>ins</li>
+            <li>del</li>
+            <li>embed</li>
+            <li>abbr</li>
+            <li>code</li>
+            <li>pre</li>
+            <li>ul</li>
+        </code></ul>
+        <p>Para mais exemplos de tags obsoletas e tags semânticas que as substituem confira esse artigo da <a href="https://dev.w3.org/html5/pf-summary/obsolete.html">W3C</a></p>
+        <h2>Além de tags de forma - outros atributos, procedimento e tags obsoletos </h3>
+        <p>Algumas outras práticas, apesar de ainda funcionarem, são desencorajadas no HTML5, por exemplo, a tag meta e os atributos border e bgcolor, muitas vezes colocados nas tags &lt;body&gt; ou &lt;img&gt;, <br> o uso de aspas em citações, trocadas por &lt;q&gt;, para citações curtas, e &lt;blockquote&gt; para citações longas. Confira abaixo um trecho importante do referido artigo da W3C que exemplifica isso:</p>
+        <blockquote cite="https://dev.w3.org/html5/pf-summary/obsolete.html">
+        <pre>
+                Obsolete but conforming features
+Features listed in this section will trigger warnings in conformance checkers.
+
+In the HTML syntax, authors should not specify DOCTYPEs that get parsed as obsolete permitted DOCTYPEs.
+
+Authors should not specify an http-equiv attribute in the Content Language state on a meta element. The lang attribute should be used instead.
+
+Authors should not specify a border attribute on an img element. If the attribute is present, its value must be the string "0". CSS should be used instead.
+
+Authors should not specify a language attribute on a script element. If the attribute is present, its value must be an ASCII case-insensitive match for the string "JavaScript" and either the type attribute must be omitted or its value must be an ASCII case-insensitive match for the string "text/javascript". The attribute should be entirely omitted instead (with the value "JavaScript", it has no effect), or replaced with use of the type attribute.
+
+Authors should not specify the name attribute on a elements. If the attribute is present, its value must not be the empty string. In earlier versions of the language, this attribute served a similar role as the id attribute. The id attribute should be used instead.
+        </pre>
+        </blockquote>
+    </section>
+    <section>
+    <h3>Exemplos de formatações usando tags antigas e novas tags semânticas</h3>
+    <h3>Exemplos de tags semânticas e práticas encorajadas no HTML5 </h3>
+    
+    </section>
+</body>
+</html>
