@@ -24,23 +24,52 @@
         <!--Tag obsoletas-->
         <p>As seguintes tags foram tornadas obsoletas pela HTML5</p>
         <ul><code>
-            <li>big</li>
-            <li>i</li>
-            <li>u</li>
-            <li>b</li>
-            <li>strike</li>
-            <li>blink</li>
-            <li>marquee</li>
-            <li>applet</li>
-            <li>center</li>
-            <li>font</li>
-            <li>acronym</li>
-            <li>tt</li>
-            <li>xmp</li>
-            <li>dir</li>
+            <li> big 
+                <p>tornava o texto grande: <mark>substituida por CSS<mark></p>
+            </li>
+            <li> i 
+                <p>inseria itálico: <mark>substituida por &lt;em&gt;</mark></p>
+            </li>
+            <li> u 
+                <p>inseria sublinhado:<mark>substituida por &lt;ins&gt;</mark></p>
+            </li>
+            <li> b
+                  <p>inseria negrito: <mark>substituida por &lt;strong&gt;</mark></p>
+            </li>
+            <li> strike
+                 <p>inseria texto riscado: <mark>substituida por &lt;del&gt;</mark></p>
+            </li>
+            <li> blink
+                 <p>fazia texto piscar: <mark>substituida por Javascript...</mark></p>
+                 <p><small>Na verdade, ela é desencorajada totalmente como mau estilo!</small></p>
+                </li>
+            <li> marquee
+                <p>fazia o texto se mecher de determinada forma: <mark>assim como a anterior, foi substituida por Javascript</mark><strong> Animações se fazem com JS</strong></p>
+            </li>
+            <li> applet
+                <p>era usada para inserir um plug-in gráfico Java na página: foi substituída por &lt;embed&gt;</p>
+            </li>
+            <li> center
+                <p>mudava o alinhamento do texto para centralizado: <mark>substituida por CSS<mark></p>
+            </li>
+            <li> font
+                <p>mudava diversas caracterísitcas do texto com seus atributos, como color e bgcolor: <mark>substituida por CSS<mark></p>
+            </li>
+            <li> acronym
+                 <p>adicionava abreviações: <mark>foi substituida por &lt; abbr&gt;</mark> </p>
+            </li>
+            <li> tt
+                 <p>formatava o texto para fonte monoespaçada:<mark> foi substituída por &lt;code&gt;</mark></p>
+            </li>
+            <li> xmp
+                <p>era usada para mostrar um texto preformatado, que não era interpretado como HTML e tinha sua formatação original preservada: <mark>substituida por &lt;pre&gt;</mark> </p>
+            </li>
+            <li> dir
+                <p>era usada para listas de diretório:<mark> foi substituída por &lt;ul&gt;</mark> </p>
+            </li>
         </code></ul> 
         <!--Tags semânticas-->
-        <p>Essas são somente algumas das tags semânticas usadas agora. <strong>Existem muitas outras</strong></p>
+        <p>Essas são somente algumas das tags semânticas usadas agora. <strong>Existem muitas outras. Abaixo temos o resumo das novas tags que substituem as obsoletas</strong></p>
         <ul><code>
             <li>strong</li>
             <li>em</li>
@@ -53,6 +82,15 @@
             <li>ul</li>
         </code></ul>
         <p>Para mais exemplos de tags obsoletas e tags semânticas que as substituem confira esse artigo da <a href="https://dev.w3.org/html5/pf-summary/obsolete.html">W3C</a></p>
+
+        <!--ESTOU AQUI-->
+        <p> Abaixo temos algumas outras tags semânticas: elas se parecem bastante com divs, mas deixam o conteúdo dentro delas com um significado mais significativo do que somente o de uma nova "divisão"</strong></p>
+        <ul><code>
+            <li></li>
+        </code></ul>
+
+        <p>Para mais exemplos de tags semânticas e HTML semântico em geral, visite este artigo <a href="https://www.freecodecamp.org/news/semantic-html5-elements/">freeCodeCamp - Semantic HTML5 Elements Explained</a></p>
+        
         <h2>Além de tags de forma - outros atributos, procedimento e tags obsoletos </h3>
         <p>Algumas outras práticas, apesar de ainda funcionarem, são desencorajadas no HTML5, por exemplo, a tag meta e os atributos border e bgcolor, muitas vezes colocados nas tags &lt;body&gt; ou &lt;img&gt;, <br> o uso de aspas em citações, trocadas por &lt;q&gt;, para citações curtas, e &lt;blockquote&gt; para citações longas. Confira abaixo um trecho importante do referido artigo da W3C que exemplifica isso:</p>
         <blockquote cite="https://dev.w3.org/html5/pf-summary/obsolete.html">
