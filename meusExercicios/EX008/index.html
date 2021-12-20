@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias Dinâmicas</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com mídias</h1>
+    <h2>Imagens Dinâmicas</h2>
+    <h3>OURO PRETO - MG</h3>
+    <picture>
+        <source media="(max-width:760px)" srcset="imagens/ouro-p.jpg" type="image/jpg" alt="Ouro Preto - Imagem Grande">
+        <source media="(max-width:1060px)" srcset="imagens/ouro-m.jpg" type="image/jpg" alt="Ouro Preto - Imagem Média"> <!--coloca como limite o tamanho da foto maior com mais 60px-->
+        <img src="imagens/ouro-g.jpg" alt="Ouro Preto - Imagem Grande">
+    </picture>
+    <h2>Audios no HTML5</h2>
+    <h3>Música gratuita do Youtube Studio</h3>
+    <!--Youtube Studio tem biblioteca de audio com liçencas livres -->
+    <!--O ideal é sempre colocar o atributo preload metadata para não carregar o audio todo antes do site, só as informações básicas, e o atributo controls, para dar autonomia ao usuario -->
+        <!--MP3 WAV (evite - grande demais) OGG - Melhores extensões para os navegadores: use mais de uma para maior cobertura de compatibilidade-->
+
+    <audio preload="metadata" controls> <!-- atributos: autoplay controls loop-->
+        <source src="audio/blackmass.mp3" type="audio/mpeg"> <!--/mpeg é o mediatype do mp3-->
+        <source src="audio/blackmass.ogg" type="audio/ogg">
+        <p>Seu navegador não tem suporte para aúdio - <a href="audio/blackmass.mp3" download="blackmass.mp3" type="audio/mpeg">Clique aqui</a> para baixar o aúdio</p>
+    </audio>
+    <!--colocamos no topo da tag audio o source src type favorito, caso ele falhe, carregamos o segundo, e caso esse falhe, adicionamos o parágrafo que contem um link para download do aúdio-->
+    <h2>Vídeos no HTML5</h2>
+    <h3>Blue Crooks no Pub AIX - Último Show de 2021 </h3>
+    <!--Formatos de vídeo suportados MPEG WEBM: mas cuidado, videos tem formatos E codecs. O formato não indica o padrão para abrir e reproduzir o video-->
+    <!--para gerar videos em outros formatos, use um conversor com, como o programa open 
+        source chamado Handbrake, disponível para várias plataformas. https://handbrake.fr/downloads.php -->
+    <video width="750" poster="video/crooksPubAix.jpg" controls> <!--cuidado com o tamanho da imagem do poster. Para encaixar ela deve ter a mesma width do video e metade disso como heigth-->
+        <source src="video/sergioDestroy.mp4" type="video/mp4">
+        <source src="video/sergioDestroy.mp4" type="video/mp4">
+        <p>Seu navegador não suporta videos. Se quiser, você pode baixar o vídeo clicando <a href="video/sergioDestroy.mp4" download="sergioDestroy.mp4" type="video/mp4">aqui.</a></p>
+    </video>
+    <h4>Segue abaixo tabela de formatos suportados pelos maiores navegadores</h4>
+    <table>
+        <tr>
+            <td>Navegador</td>
+            <td>Arquivos compatíveis</td>
+        </tr>
+        <tr>
+            <td>Microsoft Edge</td>
+            <td>.mp4 .m4v</td>
+        </tr>
+    </table>
+
+</body>
+</html>
