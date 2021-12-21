@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <ol type="" start=""> <!-- Esses dois parâmetros são ótimos: 1: numeros
+    A: letras maiúsculas
+    a: letras minúsculas
+    I: números romanos maiúsculos
+    i: números romanos minúsculos
+    start: onde começa a ordem da lista: TENÇÃO - PARÂMETRO EXCLUSIVAMENTE NUMÉRICO, SE QUISER COMEÇAR EM C DIGITE 3 NO VALOR DO PARÂMETRO-->
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café </li>
+        <li> Escovar os dentes <!--EM HTML5 O /LI É OPCIONAL-->
+    </ol>
+    <h2>Listas não Ordenadas</h2>
+    <!-- escrever só </ já aparece o fechamento da tag anterior!-->
+   <h3>square unordered list</h3>
+    <ul type="square"> <!-- opções de type: disc square circle-->
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+    </ul>
+    <h3>circle unordered list</h3>
+    <ul type="circle">
+       <li>Pão</li>
+       <li>Leite</li>
+       <li>Tomate</li>
+   </ul>
+   <h3>disc unordered list</h3>
+   <ul type="disc">
+    <li>Pão</li>
+    <li>Leite</li>
+    <li>Tomate</li>
+    </ul>
+
+    <h2>Minhas Linguagens favoritas</h2>
+    <aside>Misturando listas ordenadas</aside>
+    <ol>
+        <li>Aprendendo</li>
+        <ol type="a">
+            <li>Javascript</li>
+            <li>C#</li>
+            <li>SQL</li>
+        </ol>
+        <li>Quero aprender</li>
+        <ol type="a" start="3">
+            <li>PHP</li>
+            <li>Pyhton</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+    <!-- apertando alt e clicando em diferentes pontos vc adiciona outros cursores, assim pode escrever ou apagar ao mesmo tempo em vários pontos diferentes-->
+    <h2>Meus Jogos Favoritos</h2>
+    <aside>Misturando listas ordenadas e não-ordenadas</aside>
+    <ol>
+        <li>PS2</li>
+        <ul type="disc">
+            <li>GTA-SA</li>
+            <li>Tekken 5</li>
+            <li>Bully</li>
+            <li>NFS - Mostwanted</li>
+        </ul>
+        <li>XBOX</li>
+        <ul type="circle">
+            <li>Assasins Creed</li>
+                <ul type="square">
+                    <li>Assasins Creed - Ezio Trilogy</li>
+                    <li>Assins Creed - Black Flag</li>
+                    <li>Assasins Creed - Odyssey</li>
+                </ul>
+            <li>Gears of War</li>
+            <li>GTA-V</li>
+        </ul>
+    </ol>
+    <!--Tempos também listas de definição! Elas devem ser usadas para agrupar definições e são procuradas por mecanismos de busca quando alguém pesquisa por uma definição-->
+    <h2>Lista de Definições</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Hyper-Text Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+</body>
+</html>

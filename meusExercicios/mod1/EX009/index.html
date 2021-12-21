@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        body{
+            background-color: #cef5df;
+            font-size:16pt;
+            }
+        p{ text-align: justify;
+            font-size: 0.8em
+        }
+        header{
+            text-align:center;
+            margin-bottom: 200px;
+        }
+        img{
+            position:absolute;
+            right:15px;
+            top:15px;
+            width: 150px;
+            height:150px;
+        }
+        li {
+            border: solid 1px grey;
+            padding: 10px;
+        }
+        ul, ol{
+            width: 35%;
+            height:35%;
+        }
+    </style>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <!--dicas dos vídeos do guanabara
+    regra no CSS começa com @. @charset "utf-8"; no css faz a adaptação a simbolos como acentuação
+alt seta pra cima no win explorer = voltar
+unidade em para valores no css = unidade reltiva propocional ao valor herdado
+ordem de prioridade do css = inline, interno, externo-->
+</body>
+    <header>
+        <h1>Estilos em Cascata - As CSS</h1>
+        <img src="../EX003/imagens/CSS_200.png" alt="logo-CSS">
+    </header>
+   
+    <section>
+    <h2>Formas de incorporação</h2>
+        <h3>Inline</h3>
+            <p>As CSS <em>inline</em> são insideridas quando adicionamos o atributo <code>style="atributo:valor,valor; atributo:valor;"</code> em uma tag. Elas devem ser <strong>evitadas</strong>. O idela é usá-la somente em alterações <strong style="text-decoration: underline; color: red; font-size: larger;">muito pontuais</strong>, como acabamos de fazer aqui.Esse estilo pontual foi feito usando o seguinte código - <code> style="text-decoration: underline; color: red; font-size: larger;"</code>
+        <h3>Interno</h3>
+            <p>As CSS <em>internas</em> são adicionadas pela tag style aberta no head do documento html. Elas são boas por separar as declarações de estilo do código HTML e permitir o uso de seletores, ids, classes, etc.. No entanto, se for necessário aplicar estilos a mais de uma página, utilizar esse método pode ser demasiado trabalhoso e suscetível a erros. Abaixo temos o código CSS que utilizamos para configurar essa página</p>
+            <p>
+                <pre>
+                    <code>
+                        &lt;head&gt;
+                        &lt;style&gt;
+                            body{
+                                background-color: #cef5df;
+                                font-size:16pt;
+                                }
+                            p{ text-align: justify;
+                                font-size: 0.8em       &lt;!--unidade 'em' para valores no css = unidade reltiva propocional ao valor herdado, nesse caso,
+                                                       80% do valor 16pt, configurado no seletor body--&gt;
+                            }
+                            header{
+                                text-align:center;
+                                margin-bottom: 200px;
+                            }
+                            img{
+                                position:absolute;
+                                right:15px;
+                                top:15px;
+                                width: 150px;
+                                height:150px;
+                            }
+                            li {
+                                border: solid 1px grey;
+                                padding: 10px;
+                            }
+                            ul, ol{
+                                width: 35%;
+                                height:35%;
+                            }
+                        &lt;/style&gt;
+                        &lt;/head&gt;
+                    </code>
+                </pre>
+            </p>
+        <h3>Externo</h3>
+        <p>Para adicionar CSS <em>externo</em>, devemos adicionar uma tag link no head do html, dessa forma <code>&lt;link rel="stylesheet" href="nome_do_arquivo.css"&gt;</code>. Assim, todo o código referente a estilo ficará completamente separado em outro arquivo. Isso facilita a escrita de todo o design do site, pois as linhas de css frequentemente são muitas e tomam muito espaço se forem deixadas junto do arquivo HTML. Além disso, o externo facilita a aplicação de um mesmo estilo a varios arquivos.</p>
+        <p>
+            É também possível linkar vários arquivos CSS no mesmo HTML, assim eles se complementam. Neste documento as bordas dos elementos h3 foram feitas em um arquivo css, enquanto a formatação dos códigos-fonte foi feita com outro arquivo css. <br>
+            <code>        
+                    <h4>Código Externo 1 - &lt;link rel="stylesheet" href="style1.css"&gt;</h4>
+                    <pre>
+                            @charset "utf-8";
+                            code{
+                                color:rgb(79, 69, 69);
+                                font-style: italic;
+                                font-size: 12pt;
+                            }
+                    </pre>
+                    <h4>Código Externo 2 - &lt;link rel="stylesheet" href="style2.css"&gt;</h4>
+                    <pre>
+                            @charset "utf-8";
+                            h3{
+                                border: ridge 1px blue;
+                                width:200px;
+                            }
+                    </pre>
+            </code>
+        </p>
+    </section>
+    <section>
+        <h2>Ordem de Prioridade das CSS</h2>
+        <p>É possível utilizar todos os modos supracitados para inserir CSS no projeto. No entanto, eles têm uma ordem de prioridade, caso existam diferentes declarações sobre os mesmos seletores ou elementos. A ordem é a seguinte:</p>
+        <ol>
+            <li>CSS INLINE</li>
+            <li>CSS INTERNO</li>
+            <li>CSS EXTERNO</li>
+        </ol>
+    </section>
+</html>
