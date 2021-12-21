@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisagens Flexíveis</title>
+<style>
+    body{
+        background-color: black;
+    }
+    h1{
+        font-size: 28pt;
+        font-style: italic;
+        font-family: monospace;
+        color: lavender;
+        text-align: center;
+    }
+    picture{
+        position: relative;
+        margin-top: 100px;
+        margin-left: 20%;
+    }
+</style>
+</head>
+<body>
+    <h1>Paisagens Flexíveis</h1>
+    <picture>
+        <source media="(max-width:750px)" srcset="imagens/paisagem-p.png" alt="paisagem pequena" type="image/png">
+        <source media="(max-width:1250px)" srcset="imagens/paisagem-m.png" alt="paisagem média" type="image/png">
+        <img src="imagens/paisagem-g.png" alt="paisagem grande">
+    </picture>
+    <picture>
+        <source media="(max-width:750px)" srcset="imagens/paisagem2-p.jpg" alt="paisagem media 3" type="image/jpg">
+        <source media="(max-width:1250px)" srcset="imagens/paisagem2-m.jpg" alt="paisagem media 2" type="image/jpg">
+        <img src="imagens/paisagem2-g.jpg" alt="paisagem grande 2">
+    </picture>
+</body>
+</html>
