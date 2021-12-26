@@ -1,0 +1,68 @@
+/*repositorio de fonts da google:https://fonts.google.com/ */
+        /*regras devem vir logo ao inicio da tag style ou em arquivo separado antes dos seletores*/
+        @import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+        
+        body{
+            font-family: "Work sans", Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 1em;
+            font-style: normal;
+            /*short-hand: style weight size family*/
+
+            /*Medidas Absolutas
+            cm, mm, in, px, pt(ponto - medida do word, para coisas impressas), pc(paica)
+
+            Medidas Relativas
+            em,(relativa ao tamanho atual/normal) ex(relativa a altura x da fonte), rem(rel. a tamanho da font no body),  vh(%da alturaviewport)
+
+
+!!!!!!!!!!RECOMENDAÇÃO W3C!!!!!!!
+USE COMO UNIDADE DE MEDIDA SOMENTE PX E EM
+
+16px geralmente é o tamanho padrão das fontes nos navegadaores
+
+1em = 16px
+
+Para melhor compatibilidade com varios dispositivos e navegadores - use em!!!!!!!!
+
+
+            */
+            /*isso é uma web safe-combination de fontes, na qual ele tenta usar a primeira fonte, caso o dispositivo não a possua, ele tenta a próxima e assim por diante. Essas combinações possuem alta compatibilidade*/
+            /*sans-serif ou serif todos os dispositivos vão ter, pois isso é um gênero  */
+            /*portanto, nunca escreva só uma fonte, use uma safe combination - da pra pesquisr no w3c
+            use no maximo tres a quatro fontes no site*/
+        }
+        h2{
+            font: 3em Vujahday Script, arial, sans-serif;
+        }
+
+        #gfonts{
+            font:1.5em Inconsolata
+        }
+/*use mais de um formato, preferencialmente, para as fontes - otf e ttf funciona muito bem mas vale testar os outros formatos em mais de um navegador*/
+/*É NECESSÁRIO FAZER ESSA REGRA CONFIGURANDO CADA CARACTERÍSTICA DA FONTE IMPORTADA POR ARQUIVO LOCAL*/
+@font-face {
+    font-family: meunomedafonte;
+    src: url('fontes/southmore/Southmore.ttf') format('truetype');
+    font-weight:normal;
+    font-style: normal;
+}
+/*Tipos de format()
+-opentype (otf)
+-truetype (ttf)
+-embedded-opentype
+-truetype-aat(Apple Advanced Typografphy
+-svg
+
+*/
+        #ext{
+            font-family: meunomedafonte;
+        }
+        p{
+            font-family: Roboto Mono;
+            text-align: justify;
+            text-indent: 20px; /*!!!!ótimo para criar espaço de parágrafo padronizado sem precisar fazer isso no texto do conteúdo!!*/
+        }

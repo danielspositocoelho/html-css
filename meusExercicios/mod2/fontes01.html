@@ -5,20 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fontes em CSS</title>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            /*isso é uma web safe-combination de fontes, na qual ele tenta usar a primeira fonte, caso o dispositivo não a possua, ele tenta a próxima e assim por diante. Essas combinações possuem alta compatibilidade*/
-            /*sans-serif ou serif todos os dispositivos vão ter, pois isso é um gênero  */
-            /*portanto, nunca escreva só uma fonte, use uma safe combination - da pra pesquisr no w3c*/
-        }
-    </style>
+   <link rel="stylesheet" href="style1.css">
 </head>
 <body>
     <h1>Trabalhando com fontes</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, quisquam enim similique illo iure at doloremque, omnis et, voluptates nisi quas maxime incidunt expedita corrupti cumque porro fugit voluptatibus libero.</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate quisquam blanditiis natus illo rerum sunt suscipit laudantium alias eius reprehenderit, at consectetur dolorem ratione quaerat facere molestias ab ex reiciendis?</p>
-    <h2>Subtítulo do exercício</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut natus architecto est omnis, molestias quo unde cupiditate veritatis recusandae consectetur quidem ducimus labore veniam ratione? Labore optio quas vel! Quibusdam?</p>
+    <h2>Fonts com Google Fonts</h2>
+    <p id="gfonts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit error officiis cumque aperiam laborum similique doloremque suscipit ratione molestias facilis, amet vitae molestiae provident alias. Magnam nihil necessitatibus alias!</p>
+    <!--ATENÇÃO: ANALISE OS GLIFOS ANTES DE USAR, POIS NEM TODAS TEM ACENTUAÇÕES, MAISCULUAS, MINUSCULAS ETC...-->
+    <h2 id="ext">Fonts Externas com <a href="https://www.dafont.com/pt/">Dafont.com</a></h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro recusandae reprehenderit aperiam voluptas hic quis vitae in voluptatem fugit obcaecati officiis saepe laborum ullam, nisi fuga inventore. Ad, atque modi?</p>
+    <h3>Usando uma fonte extraída de um outro site a partir da extensão <a href="https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh">Fonts Ninja</a></h3>
+    <p>A font dos parágrafos (roboto mono) foi extraída do site do youtube</p>
+    
 </body>
 </html>
