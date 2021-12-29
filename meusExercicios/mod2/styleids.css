@@ -1,0 +1,39 @@
+@charset "utf-8";
+/*id É SOMENTE PARA ELEMENTOS ÚNICOS, SÓ PODE SER USADO UMA VEZ POR ID CRIADO
+Para usar uma identficação especial para varios elementos usamos .CLASS 
+nome das class devem ser sempre FUNCIONAL */
+body{
+    background-color: #fdfaebbf;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color:#90e20a;
+}
+h2{
+    color:#0EE64E;
+    width:900px;
+}
+p{
+    text-align: justify;
+    text-indent: 10px;
+    width:800px;
+}
+h1#principal{ /*assim somente os elementos h1 com id principal seguem essa declaração, se deixar sem, qualquer elemento com principal id segue*/
+    text-align: center;
+    background-color: #0ee64f82;
+    color: white;
+}
+/*podemos aplicar mais de uma class a um eleento e também misturar id e class*/
+.destaque{
+    background-color: rgba(255, 255, 0, 0.494);
+}
+.basico{
+    background-color: #42e3fc4d;
+}
+.intermediario{
+    background-color: #fca84256;
+}
+.avancado{
+    background-color: #ff343467;
+}

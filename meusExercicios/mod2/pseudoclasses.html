@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses</title>
+    <style>
+        div{
+            display: inline-block; /* todo elemento html é renderizado como uma box de display block (bloco, toma todo o width do device-display
+            inline é display em linha, toma o menor tamanho possível, fica um ao lado do outro.
+            inline-block é o display inline com as propriedades height e width configuráveis, como um bloco
+            none é o display invisível, torna o elemento invisível, utilizado para animações simples com css, como em menus
+            flex e grid são esquemas de display complexos .... depois falamos deles*/
+            background-color: lightgray;
+            border: 1px solid black;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+        }
+        /*  :PSEUDO CLASSES - ESTADO DO ELEMENTO, Deve estar relaciondo a uma .class ou #id
+        elas comandam o estilo mediante determinados eventos! */
+
+        /*todo parágrafo que estiver dentro de div não será mostrado*/
+        div>p{
+            display: none;
+        }
+/*notação elemento1:pseudo-classe>elemento2 --> indica que o elemento 2 é filho do 1 e será estilizada pelas declarações desse seletor de pseudoclasse*/
+        div:hover>p{
+            display: block;
+            color: white;
+            background-color: red;
+        }
+        /*essa dinâmica de display usando pseudoclasse hover é um protótipo exemplar para criação de menus*/
+        div:hover{
+            background-color: yellow;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de pseudoclasse Hover</h1>
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o mouse aqui
+        <p>Texto Escondido...</p>
+    </div>
+    <p>Fim do exemplo</p>
+</body>
+</html>

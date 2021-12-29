@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /*
+            # = id
+            . = class
+            : = pseudo-class
+            :: = pseudo-element
+            > = children
+        
+        */
+        /* :PSEUDOCLASSSES - Definem estados de Elementos*/
+
+        /* ::PSEUDOELEMENTOS - Definem os conteúdos periféricos do elemento */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            color:red;
+            text-decoration: none; /*retira o sublinhado padrão dos links*/
+            
+        }
+
+        /*Isso é um pseudoelemento - podemos adicionar conteudo ao elemento via css, antes ou depois do seu conteudo principal, que esta no html*/
+
+        a::after{
+            content: ' [link]';
+            text-decoration: none;
+            font-weight: normal;
+        }
+        .especial::before{
+            content: "✮ ";
+        }
+        .especial::after{
+            content: " ✮"
+        }
+        /*assim podemos configurar a forma do elemento com um pouco de conteúdo, sem misturar o proposito semantico do html
+        
+        link para os simbolos usados https://erikasarti.com/html/dingbats-simbolos-desenhos/. 
+        */
+        a:visited{
+            color: darkred;
+        }
+        a:hover{
+            color:black;
+            text-decoration: underline;
+        }
+        a:active{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a class="especial" href="https://github.com/danielspositocoelho" target="_blank" rel="external">Repositório Github</a></li>
+        <li><a href="https://www.youtube.com/channel/UCM8vTVxFTIZ_mAZUKuLpF4w"  target="_blank" rel="external" >Canal do Youtube</a></li>
+        <li><a href="">Site - Portfólio DSC</a></li>
+    </ul>
+</body>
+</html>
