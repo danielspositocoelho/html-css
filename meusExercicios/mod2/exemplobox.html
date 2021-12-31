@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Model DevTools</title>
+    <style>
+        h1{
+            height:300px;
+            width:300px;
+            background-color: lightgray;
+            border: 10px solid goldenrod;
+            padding: 10px 15px;
+            margin: 20px auto 40px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>VAMOS VER COMO FUNCIONA O BOX DE UM H1</h1>
+    <span>
+        também de um span, que é inline, assim como <a href="#">um link qualquer</a>
+    </span>
+    <img src="../mod1/EX004/favicon.ico" alt="qualquer-coisa">
+    <p>uma imagem não é box level, pois tem o display inline-block mas um parágrafo é  <q> - uma citação quote não é box level</q></p>
+  
+    <blockquote>mas um blockquote é box level</blockquote>
+    <span style="text-align: center;">quando temos um elemento inline level e queremos centralizá-lo, basta text-align="center"</span>
+    <p>para centralizar block levels como esse parágrafo precisamos do margin: auto;</p>
+    <h2>Aqui vai o short-hand notation para border padding margin e outline </h2>
+    <blockquote><code><pre>
+        border: 10px solid black;
+        padding: 10px 10px 10px 14px; 
+                                    /*se for só um valor vale par todas as direções --> top right bottom left
+                                    se for dois valores o 1º vai para top e bottom e o segundo para left e right*/
+        margin:20px 25px 20px 25px;
+                                     /*para centralizar com shorthand só algumas direções, podemos usar auto como valor, assim */
+        margin: 20px auto 40px auto;
+        outline: 5px dashed salmon;
+
+        o shorthand é sempre: SIZE STYLE COR
+    </pre></code></blockquote>
+</body>
+</html>
