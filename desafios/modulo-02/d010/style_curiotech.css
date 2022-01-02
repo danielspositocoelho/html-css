@@ -7,35 +7,60 @@
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{  /*VARIAVEIS EM CSS SÃO FUNDAMENTAIS PARA MANUTENÇÃO DE PROJETOS!!!, DECLARAMOS AS VARIAVEIS GLOBAIS NA PSEUDOCLASSE :ROOT*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    --fonte0: Arial, Helvetica, sans-serif;
+    --fonte1: "Bebas Neue", cursive;
+    --fonte2: 'droid', sans-serif;
+    
+}
+
+
 *{
     margin:0px;
 }
 
-.videos{
-    position: relative;
-    margin:10px auto;
-    background-color:#1B5936 ;
-    padding: 20px;
+div.videos{
+    margin:20px -20px;
+    background-color: var(--cor4);
+    padding:20px;
 }
 
-iframe{
-    display:block;
+div.videos>iframe{
     margin: auto;
+    display: block;
+}
+
+.link_ext::after{
+    content:"\1F517" /*para HTML  &#x1F517  para CSS  \1F517*/
+}
+
+.destaque{
+    color:var(--cor5);
+    font-weight: bold;
 }
 
 a{
-    color:#1D5235;
+    color: var(--cor5);
     font-weight: bold;
     text-decoration: none;
 }
 
 body{
-    background-color: #84e0ad;
+    background-color: var(--cor2);
 }
 
 main{
     background-color: white;
-    width:60%;
+    max-width: 900px;
+    min-width: 500px;
     margin:0px auto;
 }
 
@@ -46,70 +71,77 @@ article{
 
 body>header{
     padding: 5px 15px;
-    background-image: linear-gradient( to bottom,#13f77a, #0c8040 8%,#0e4125 14%);
+    background-image: linear-gradient( to bottom, var(--cor1),var(--cor2),var(--cor3),var(--cor4),var(--cor5)20%);
     background-attachment: fixed;
-    font: normal 20px Courier, sans-serif; 
+}
+
+header>h1{
+    text-align: center;
+    color: white;
+    font: bold 3em var(--fonte1); 
+    text-transform:uppercase;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.507);
+}
+
+header>p{
+    font: normal 20px var(--fonte0); 
     text-align: center;
     color: white;
 }
 
-header>h1{
-    font: bold 3em Georgia, Helvetica, serif; 
-}
-
 nav{
     text-align: left;
-    margin-top:15px
+    background-color: var(--cor5);
+    height:30px;
+    padding-top:20px;
+    padding-left:20px;
+    font-family: var(--fonte0);
 }
 
 nav>a{
     text-decoration: none;
-    font: normal 1em Arial;
     color: white;
-    margin-right:10px;
+    margin:15px;
+    padding:10px;
 }
 
 nav>a:hover{
     text-decoration: underline;
+    background-color: rgba(255, 235, 205, 0.26);
 }
 
 p{
-    font: normal 1em Arial, sans-serif;
+    font: normal 1.2em var(--fonte0), Helvetica, sans-serif;
     text-indent: 20px;
     text-align: justify;
+    line-height: 2em;
 }
 
-article>h1{
-color:#1D5235;
-font:normal 1.8em droid;
+section>h1{
+color:var(--cor4);
+font:normal 1.8em var(--fonte2);
 text-align: left;
-margin: 10px 0px;
+margin: 25px 0px;
 }
 
 section>h2{
-color:#1D5235;
-font:normal 1.3em droid;
+color:var(--cor4);
+font:normal 1.3em var(--fonte2);
 text-align: left;
-margin: 10px 0px;
-background-color: #a9f2c751;   
+margin: 20px 0px;
+background-color: var(--cor0);   
 }
 
 img{
     display:block;
-    width:40em;
     margin: 20px auto;
-    height:10em;
-}
-
-img#bugdroid{
-    width:30em;
-    height: 10em;
-    margin: auto;
+    max-width: 700px;
+    min-width:300px;
 }
 
 aside{
     margin:20px auto;
-    background-color: #CEF2DE;
+    background-color: var(--cor0);
     border-radius: 25px;
 }
 
@@ -118,7 +150,7 @@ aside>header{
     font: bold 0.9em Arial;
     color: white;
     border-radius: 25px 25px 0px 0px;
-    background-color: #32A65A;
+    background-color: var(--cor3);
 }
 
 aside>p{
@@ -127,17 +159,31 @@ aside>p{
 }
 
 ul{
-    display: inline-block;
-    margin: 10px auto;
+    margin: auto;
+    /*o marcador pode ser editado como imagem ou por código css, usando list-style-type: '\2174\0020\0020';*/
     list-style-image: url('imagens/list-icon.ico');
-}
-ul#coluna{
-    margin-left:180px;
+    columns: 2; /*MELHOR FORMA DE DAR COLUNA A LISTAS*/
+    list-style-position: inside; /*marcadores dentro do block do list item*/
 }
 
+/* FIZ ASSIM DA PRIMEIRA VEZ ANTES DE VER COMO CONSTRUIR COLUNAS NA LISTA, COMO FEITO NO SELETOR ACIMA
+div#coluna1{
+    display: inline-block;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 25px 100px;
+}
+
+div#coluna2{
+    display: inline-block;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 25px 100px;
+}*/
+
 footer{
-    height:40px;
-    background-color: #1B5936;
+    height:30px;
+    background-color: var(--cor5);
     padding:10px;
 }
 
@@ -146,4 +192,12 @@ footer>p{
     text-align: center;
     font: normal 0.8em sans-serif;
     color: white;
+}
+
+footer>p>a{
+ color:white;
+}
+
+footer>p>a:hover{
+ text-decoration: underline;
 }
