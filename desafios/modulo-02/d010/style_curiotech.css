@@ -21,8 +21,7 @@
     --fonte2: 'droid', sans-serif;
     
 }
-
-
+/*LAYOUT RESPONSIVO - ADPATAR CONTEUDO E IMAGENS A TODOS OS TAMANHOS DE TELA AUTOMATICAMENTE - EVITAR TANTO QUANTO POSSIVEL ROLAGEM LATERAL*/
 *{
     margin:0px;
 }
@@ -58,15 +57,21 @@ body{
 }
 
 main{
-    background-color: white;
-    max-width: 900px;
-    min-width: 500px;
+    background-color: white; 
+    /*prática de resposividade básica - não definir tamanho absoluto das imagens e do container do conteudo, seja main, article, section, div, etc..
+    DEFINIR somente os limites maximo e minimo, deixando o conteúdo se adaptar a depender da tela
+    max-width:1200px;
+    min-width:320px;
+    height --> não precisa se preocupar tanto, pois rolagem vertical é normal
+    */
+
+    max-width: 900px; /*tamanho máximo bom - 1200px*/
+    min-width: 280px; /*320px é o tamanho de tela celular antiga, bom limite minimo - mas temos que considerar os paddings*/
     margin:0px auto;
 }
 
 article{
     padding: 20px 20px;
-    margin:0px;
 }
 
 body>header{
@@ -78,7 +83,7 @@ body>header{
 header>h1{
     text-align: center;
     color: white;
-    font: bold 3em var(--fonte1); 
+    font: bold 3em var(--fonte2); 
     text-transform:uppercase;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.507);
 }
@@ -135,8 +140,11 @@ background-color: var(--cor0);
 img{
     display:block;
     margin: 20px auto;
-    max-width: 700px;
-    min-width:300px;
+    width:100%; /*ocupar todo o container*/
+}
+img#bugdroid{
+    max-width: 450px;
+    min-width: 250px;
 }
 
 aside{
