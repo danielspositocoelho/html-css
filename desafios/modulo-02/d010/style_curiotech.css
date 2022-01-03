@@ -27,9 +27,9 @@
 }
 
 div.videos{
-    margin:20px -20px;
+    margin: 0px -20px;
     background-color: var(--cor4);
-    padding:50px;
+    padding:30px 0px;
 }
 
 div.videos>iframe{
@@ -96,6 +96,9 @@ header>h1{
     text-transform:uppercase;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.507);
     margin: 15px auto;
+    display: inline-block;
+    min-width: 80px;
+    min-height: 80px;
 }
 
 header>p{
@@ -113,12 +116,14 @@ nav{
     height:30px;
     padding:20px 10px 0px 10px;
     font-family: var(--fonte0);
+    min-height: 50px;
+    min-width:100px;
 }
 
 nav>a{
     text-decoration: none;
     color: white;
-    margin-left:15px;
+    margin-left:10px;
     padding:10px;
     border-radius: 5px;
     font-weight: bold;
@@ -145,6 +150,11 @@ text-align: left;
 margin: 25px 0px;
 }
 
+/*se vc não indicar o parentesco, ele vale para qualquer elemento y que est dentro do elemento x, dessa forma
+x y {
+....
+}
+*/
 main h2{
 color:var(--cor4);
 font:normal 1.3em var(--fonte2);
@@ -166,19 +176,16 @@ aside{
     margin:20px auto;
     background-color: var(--cor0);
     border-radius: 25px;
+    padding: 20px;
 }
 
-aside>header{
+aside>h2{
     padding:10px;
     font: bold 1em var(--fonte0);
     color: white;
     border-radius: 25px 25px 0px 0px;
-    background-color: var(--cor3);
-}
-
-aside>p{
-    margin: 10px 10px;
-    padding: 8px;
+    background-color: var(--cor4);
+    margin: -20px -20px 20px -20px ; /*valor negativo no margin faz ele sobrepassar o padding do parent*/
 }
 
 ul{
@@ -213,18 +220,20 @@ footer{
 footer>p{
     text-indent: 0px;
     text-align: center;
-    font: normal 0.8em sans-serif;
+    font: normal 0.7em sans-serif;
     color: white;
-}
-
-footer>p>a{
- color:white;
+    margin: 0px;
+    line-height: 1.5em;
 }
 /*se vc não indicar o parentesco, ele vale para qualquer elemento y que est dentro do elemento x, dessa forma
 x y {
 ....
 }
 */
-footer>p>a:hover{
+
+footer a{
+ color:white;
+}
+footer a:hover{
  text-decoration: underline;
 }
