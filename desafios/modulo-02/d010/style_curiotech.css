@@ -21,7 +21,7 @@
     --fonte2: 'droid', sans-serif;
     
 }
-/*LAYOUT RESPONSIVO - ADPATAR CONTEUDO E IMAGENS A TODOS OS TAMANHOS DE TELA AUTOMATICAMENTE - EVITAR TANTO QUANTO POSSIVEL ROLAGEM LATERAL*/
+/*LAYOUT RESPONSIVO - ADAPTAR CONTEUDO E IMAGENS A TODOS OS TAMANHOS DE TELA AUTOMATICAMENTE - EVITAR TANTO QUANTO POSSIVEL ROLAGEM LATERAL*/
 *{
     margin:0px;
 }
@@ -29,12 +29,13 @@
 div.videos{
     margin:20px -20px;
     background-color: var(--cor4);
-    padding:20px;
+    padding:50px;
 }
 
 div.videos>iframe{
     margin: auto;
     display: block;
+    width:100%;
 }
 
 .link_ext::after{
@@ -52,6 +53,10 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 body{
     background-color: var(--cor2);
 }
@@ -67,7 +72,10 @@ main{
 
     max-width: 900px; /*tamanho máximo bom - 1200px*/
     min-width: 280px; /*320px é o tamanho de tela celular antiga, bom limite minimo - mas temos que considerar os paddings*/
-    margin:0px auto;
+    margin:0px auto 50px auto;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.405);
 }
 
 article{
@@ -75,9 +83,10 @@ article{
 }
 
 body>header{
-    padding: 5px 15px;
-    background-image: linear-gradient( to bottom, var(--cor1),var(--cor2),var(--cor3),var(--cor4),var(--cor5)20%);
+    padding: 20px;
+    background-image: linear-gradient( to bottom, var(--cor2),var(--cor5)20%); /*duas cores apenas, assim ele vai da primeira cor a ultima*/
     background-attachment: fixed;
+    min-height: 150px;
 }
 
 header>h1{
@@ -86,40 +95,47 @@ header>h1{
     font: bold 3em var(--fonte2); 
     text-transform:uppercase;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.507);
+    margin: 15px auto;
 }
 
 header>p{
     font: normal 20px var(--fonte0); 
+    margin:auto;
     text-align: center;
     color: white;
+    text-indent: 0px;
+    max-width:500px;
 }
 
 nav{
     text-align: left;
     background-color: var(--cor5);
     height:30px;
-    padding-top:20px;
-    padding-left:20px;
+    padding:20px 10px 0px 10px;
     font-family: var(--fonte0);
 }
 
 nav>a{
     text-decoration: none;
     color: white;
-    margin:15px;
+    margin-left:15px;
     padding:10px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 nav>a:hover{
     text-decoration: underline;
-    background-color: rgba(255, 235, 205, 0.26);
+    background-color: var(--cor4);
+    transition-duration: 0.4s;
 }
 
 p{
-    font: normal 1.2em var(--fonte0), Helvetica, sans-serif;
+    font: normal 1.2em var(--fonte0);
     text-indent: 20px;
     text-align: justify;
     line-height: 2em;
+    margin: 15px 0px;
 }
 
 section>h1{
@@ -129,7 +145,7 @@ text-align: left;
 margin: 25px 0px;
 }
 
-section>h2{
+main h2{
 color:var(--cor4);
 font:normal 1.3em var(--fonte2);
 text-align: left;
@@ -143,8 +159,7 @@ img{
     width:100%; /*ocupar todo o container*/
 }
 img#bugdroid{
-    max-width: 450px;
-    min-width: 250px;
+    max-width: 305px;
 }
 
 aside{
@@ -155,7 +170,7 @@ aside{
 
 aside>header{
     padding:10px;
-    font: bold 0.9em Arial;
+    font: bold 1em var(--fonte0);
     color: white;
     border-radius: 25px 25px 0px 0px;
     background-color: var(--cor3);
@@ -205,7 +220,11 @@ footer>p{
 footer>p>a{
  color:white;
 }
-
+/*se vc não indicar o parentesco, ele vale para qualquer elemento y que est dentro do elemento x, dessa forma
+x y {
+....
+}
+*/
 footer>p>a:hover{
  text-decoration: underline;
 }
